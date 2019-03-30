@@ -1,0 +1,42 @@
+<!DOCTYPE HTML> 
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style type="text/css">
+h2{
+color: red;
+}
+</style>
+<title>First page</title>
+</head>
+<body>
+<h2>Hello world</h2>
+<script type="text/javascript">
+document.write(new Date());
+/* 
+1. servlets are being used to create a dynamic web page
+2. Servlets are handled by web-containers which are part of your web server 
+(Tomcat/ wildfly)
+3. HttpServer:static web pages: application has index.html: u make a request for this
+ static page and it gives u back this page
+4. WebServer: It has web container which can dynamically create a page and send us
+back (page could be like fetching data from db)
+web server == http server + web container (manage servlets)
+web container needs this web.xml to handle the requests.
+5. To create a servlet: Servlet, HttpServlet, GenericServlet
+6. Web container hanldes the lifecycle of a servlet
+Web container will create the object of the servlet, will initialize the servlet
+, will execute the servlet code, will also destroy the servlet object
+7>When the first request comes in, container will create that servlet object and call
+the init mthod to initialize the properties. This method is called only once
+when the request comes in
+It will execute the service method for every request
+Destroy method woud be called only once when undeploy the application from the server'';'
+
+
+*/
+
+</script>
+</body>
+</html>

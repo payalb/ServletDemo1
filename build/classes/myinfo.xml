@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE employee [
+<!ELEMENT employee ( name, salary, address+, hasPassport?)>
+<!ELEMENT address ( hNo, city, (zipcode|pincode))>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT hNo (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT hasPassport EMPTY>
+<!ELEMENT zipcode (#PCDATA)>
+<!ELEMENT pincode (#PCDATA)>
+
+<!-- <!ATTLIST address type CDATA #REQUIRED > -->
+<!ATTLIST address type (permanent|temporary) "permanent" > 
+<!ENTITY company "revature private limited">
+]>
+
+
+<employee>
+<name>Payal</name>
+<salary>746734</salary>
+
+<address >
+<hNo>10r &company;</hNo>
+<city>Delhi &amp;</city>
+<zipcode>250002</zipcode>
+</address>
+<hasPassport/> 
+</employee>
+
+<!-- extensible stylesheet -->
+<!-- Two type of parsers:
+Check ur xml is proper: root element, opening tag has a closing tag
+Validate ur xml with dtd/ xsd -->
